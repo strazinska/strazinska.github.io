@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abavas interjers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+    <style>
+        .fa-google {
+            color: #333; 
+        }
+        .fa-linkedin {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><a href="index.html">HARMONIA ART</a></h1>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="about.html">Par Mums</a></li>
+                    <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="vadiba.html">Projektu Vadība</a></li>
+                    <li><a href="news.html">Jaunumi</a></li>
+                    <li><a href="contact.html">Kontakti</a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-nav" id="mobileNav">
+                <ul>
+                  <li><a href="about.html">Par Mums</a></li>
+                  <li><a href="projects.html">Portfolio</a></li>
+                  <li><a href="vadiba.html">Projektu Vadība</a></li>
+                  <li><a href="news.html">Jaunumi</a></li>
+                  <li><a href="contact.html">Kontakti</a></li>
+                </ul>
+              </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="project-info">
+            <div class="project-parameters">
+                <h2>Dzīvokļu interjers Abavas ielā</h2>
+                <ul>
+                    <li><span class="emphasized">Statuss: </span>Realizēts</li>
+                    <li><span class="emphasized">Gads:</span> 2023</li>
+                    <li><span class="emphasized">Vieta:</span> Rīga, Latvija</li>
+                </ul>
+                <p>Divu dzīvokļu interjers un kapitālais remonts Abavas ielā. <span class="emphasized">xxx</span>.
+                    bla bla bla</p>
+            </div>
+            <div class="project-description">
+                <img src="Abavas 1 (realized)/IMG_5583.jpg">
+                <img src="Abavas 1 (realized)/IMG_5590.jpg">
+                <img src="Abavas 1 (realized)/IMG_2832.JPEG">
+                <img src="Abavas 1 (realized)/IMG_2834.JPEG">
+                <img src="Abavas 1 (realized)/IMG_2872.jpg">
+            </div>
+        </div>
+
+
+        <div class="floor-plans-container">
+            <h2>Rasējumi</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="Abavas 1 (realized)/72e4bace-993d-4832-8bde-d424375eb319.JPG" class="slideshow-img">
+                    <p>Virtuves skice</p>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="Abavas 1 (realized)/Abavas-7-PLĀNS_page-0001.jpg" class="slideshow-img">
+                    <p>Dzīvokļa A plāns</p>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="Abavas 1 (realized)/Abavas-1-PLĀNS_page-0001.jpg" class="slideshow-img">
+                    <p>Dzīvokļa B plāns</p>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+        
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+        
+
+        <div class="suggested-projects-container">
+            <br><h2>Citi projekti</h2>
+            <div class="suggested-projects">
+                <a class="prev" onclick="plusSuggestedSlides(-1)">❮</a>
+                <div class="suggested-slideshow">
+                    <div class="suggested-slide">
+                        <a href="Rietumu.html"><img src="Private House (Rietumu 13)/3_house.jpg" alt="Project 1"></a>
+                    </div>
+                    <div class="suggested-slide">
+                        <a href="Embassy.html"><img src="Embassy (The Hague)/4_museum.jpg" alt="Project 4"></a>
+                    </div>
+                    <div class="suggested-slide">
+                        <a href="museum.html"><img src="Museum (Spain)/5_illuminance.jpg" alt="Project 5"></a>
+                    </div>
+                    <div class="suggested-slide">
+                        <a href="hotel.html"><img src="Hotel (Riga Old Town)/6_hotel.jpg" alt="Project 3"></a>
+                    </div>
+                    <div class="suggested-slide">
+                        <a href="Abavas.html"><img src="Abavas 1 (realized)/IMG_2834.JPEG" alt="Project 2"></a>
+                    </div>
+                    <div class="suggested-slide">
+                        <a href="Sports-Center.html"><img src="Sports Center (Latvia)/2_sport.jpg" alt="Project 6"></a>
+                    </div>
+                    <div class="suggested-slide">
+                        <a href="Creative.html"><img src="Creative (models, drawings)/urban-model.JPG" alt="Project 8"></a>
+                    </div>
+                    <div class="suggested-slide">
+                        <a href="Urban.html"><img src="Urban (Spain)/detail 2_compressed_page-0001.jpg" alt="Project 7"></a>
+                    </div>
+                    <div class="suggested-slide">
+                        <a href="drawings.html"><img src="Creative (models, drawings)/urban-sketch.JPG" alt="Project 9"></a>
+                    </div>
+                </div>
+                <a class="next" onclick="plusSuggestedSlides(1)">❯</a>
+            </div>
+        </div>
+    </div>
+        
+    <footer>
+        <div class="container">
+            <a href="mailto:rita.strazinska@gmail.com"><i class="fab fa-google fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/rita-lagzdina-b600b33?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEHdXSbnqSX2UbmMWqstsQg%3D%3D" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+            <p>&copy; 2025 Harmonia Art</p>
+        </div>
+    </footer>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js" defer></script>
+    <div class="cursor"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This is the modal content.</p>
+        </div>
+    </div>
+
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+    </div>
+    <script>
+        function toggleMenu() {
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

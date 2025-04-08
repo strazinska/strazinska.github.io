@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strazinska - Contact</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qir2vvt.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+    <style>
+        .fa-google {
+            color: #333; 
+        }
+        .fa-linkedin {
+            color: #333;
+        }
+    </style>
+</head>
+<body class="contact-page">
+
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Studio KS</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="mailto:k.strazinska@gmail.com"><i class="fab fa-google fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/katrina-strazinska" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+            <p><br>&copy; 2024 Studio KS</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+    <div class="cursor"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            let formData = new FormData(this); 
+
+            fetch('send-email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data); 
+                showModal('Message Sent!', 'Your message has been sent successfully.');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showModal('Error', 'There was an error sending your message. Please try again later.');
+            });
+
+            this.reset(); 
+        });
+
+        function showModal(title, message) {
+            document.getElementById('modal-text').innerText = message;
+            document.getElementById('modal').style.display = 'block';
+
+            document.querySelector('.modal-content .close').addEventListener('click', function() {
+                document.getElementById('modal').style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>

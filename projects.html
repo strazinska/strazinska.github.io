@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+
+    <style>
+        .fa-google {
+            color: #333; 
+        }
+        .fa-linkedin {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">HARMONIA ART</a></h1>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="about.html">Par Mums</a></li>
+                    <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="vadiba.html">Projektu Vadība</a></li>
+                    <li><a href="news.html">Jaunumi</a></li>
+                    <li><a href="contact.html">Kontakti</a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-nav" id="mobileNav">
+                <ul>
+                  <li><a href="about.html">Par Mums</a></li>
+                  <li><a href="projects.html">Portfolio</a></li>
+                  <li><a href="vadiba.html">Projektu Vadība</a></li>
+                  <li><a href="news.html">Jaunumi</a></li>
+                  <li><a href="contact.html">Kontakti</a></li>
+                </ul>
+              </nav>
+        </div>
+    </header>
+
+    <section id="projects">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filterx" data-filter="all">Visi</button>
+                <button class="filterx" data-filter="architecture">Ieceres</button>
+                <button class="filterx" data-filter="realized">Realizētie</button>
+            </div>
+
+            <div class="row">
+                <div class="project realized ">
+                    <a href="Abavas-interjers.html">
+                        <img src="Abavas 1 (realized)/abavas main.jpg">
+                        <div class="project-overlay">
+                            <h3>Dzīvokļu interjers</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="project realized">
+                    <a href="Urban.html">
+                        <img src="0 pictures/labiesi jpeg.jpg">
+                        <div class="project-overlay">
+                            <h3>Lauku savrupmāja</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="project realized">
+                    <a href="Creative.html">
+                        <img src="0 pictures/IMG (94)-0.webp">
+                        <div class="project-overlay">
+                            <h3>Viesu namiņi</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="project architecture">
+                    <a href="housing.html">
+                        <img src="Housing (Talsi)/1_housing_new.jpg" alt="Residential House">
+                        <div class="project-overlay">
+                            <h3>Daudzdzīvokļu māja</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="project architecture">
+                    <a href="Rietumu.html">
+                        <img src="Private House (Rietumu 13)/3_house.jpg" alt="Private House">
+                        <div class="project-overlay">
+                            <h3>Privātmāja</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="project architecture">
+                    <a href="Embassy.html">
+                        <img src="Embassy (The Hague)/4_museum.jpg" alt="Renovation">
+                        <div class="project-overlay">
+                            <h3>Renovācija</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="project architecture">
+                    <a href="Hotel.html">
+                        <img src="0 pictures/Sala interjers 1-1.webp">
+                        <div class="project-overlay">
+                            <h3>Salas mežaparks</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="project architecture">
+                    <a href="lantes.html">
+                        <img src="Lantes/4.3.jpg" alt="Art Museum">
+                        <div class="project-overlay">
+                            <h3>Viesu nama iecere</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="project architecture">
+                    <a href="Sports-Center.html">
+                        <img src="Sports Center (Latvia)/2_sport.jpg" alt="Sports Center">
+                        <div class="project-overlay">
+                            <h3>Sporta centrs</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="project realized">
+                    <a href="models.html">
+                        <img src="0 pictures/shop small.jpg">
+                        <div class="project-overlay">
+                            <h3>Kosmētikas veikalu interjers</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="project realized">
+                    <a href="drawings.html">
+                        <img src="0 pictures/4e0ldw.jpg">
+                        <div class="project-overlay">
+                            <h3>SPA salonu interjers</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="project realized">
+                    <a href="branding.html">
+                        <img src="Creative (models, drawings)/b2y.png" alt="Graphic Design">
+                        <div class="project-overlay">
+                            <h3>Produktu dizains</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="mailto:rita.strazinska@gmail.com"><i class="fab fa-google fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/rita-lagzdina-b600b33?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEHdXSbnqSX2UbmMWqstsQg%3D%3D" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+            <p>&copy; 2025 Harmonia Art</p>
+        </div>
+    </footer>
+    <div class="cursor"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

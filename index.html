@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonia Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+    <style>
+        .fa-google {
+            color: black; 
+        }
+        .fa-linkedin {
+            color: black;
+        }
+    </style>
+</head>
+<body id="home-page" class="bodypage index-page">
+    <header class="headernew">
+        <div class="container">
+            <h1><a href="index.html">HARMONIA ART</a></h1>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="about.html">Par Mums</a></li>
+                    <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="vadiba.html">Projektu Vadība</a></li>
+                    <li><a href="news.html">Jaunumi</a></li>
+                    <li><a href="contact.html">Kontakti</a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-nav" id="mobileNav">
+                <ul>
+                  <li><a href="about.html">Par Mums</a></li>
+                  <li><a href="projects.html">Portfolio</a></li>
+                  <li><a href="vadiba.html">Projektu Vadība</a></li>
+                  <li><a href="news.html">Jaunumi</a></li>
+                  <li><a href="contact.html">Kontakti</a></li>
+                </ul>
+              </nav>
+        </div>
+    </header>
+    <div class="center-container">
+        <h2 id="animated-heading"></h2>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+
+    
+    <div class="cursor"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

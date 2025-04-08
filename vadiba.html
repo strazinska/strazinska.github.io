@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+
+    <style>
+        .fa-google {
+            color: #333; 
+        }
+        .fa-linkedin {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">HARMONIA ART</a></h1>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="about.html">Par Mums</a></li>
+                    <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="vadiba.html">Projektu Vadība</a></li>
+                    <li><a href="news.html">Jaunumi</a></li>
+                    <li><a href="contact.html">Kontakti</a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-nav" id="mobileNav">
+                <ul>
+                  <li><a href="about.html">Par Mums</a></li>
+                  <li><a href="projects.html">Portfolio</a></li>
+                  <li><a href="vadiba.html">Projektu Vadība</a></li>
+                  <li><a href="news.html">Jaunumi</a></li>
+                  <li><a href="contact.html">Kontakti</a></li>
+                </ul>
+              </nav>
+        </div>
+    </header>
+
+    <section id="projects">
+        <div class="container">
+
+            <div class="row">
+                <div class="project ">
+                        <img src="0 pictures/bergi jpg.jpg">
+                        <div class="project-overlay">
+                            <h3>Loģistikas centra Berģi būvniecības vadība</h3>
+                        </div>
+                </div>
+                <div class="project ">
+                    <img src="0 pictures/Rietumu Centrs.jpg">
+                    <div class="project-overlay">
+                        <h3>Tirdzniecības centra Rietumu Centrs pārbūves vadība</h3>
+                    </div>
+                </div>
+                <div class="project ">
+                    <img src="0 pictures/bd9435f235cb4005045f2e6c43e9346a_XL.jpg">
+                    <div class="project-overlay">
+                        <h3>Tirdzniecības centra Valdeka pārbūves vadība</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="project ">
+                    <img src="0 pictures/Dignājas nami.jpg">
+                    <div class="project-overlay">
+                        <h3>Daudzdzīvokļu ēku būvniecības vadība Dignājas ielā</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="mailto:rita.strazinska@gmail.com"><i class="fab fa-google fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/rita-lagzdina-b600b33?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEHdXSbnqSX2UbmMWqstsQg%3D%3D" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+            <p>&copy; 2025 Harmonia Art</p>
+        </div>
+    </footer>
+    <div class="cursor"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
