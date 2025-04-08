@@ -32,7 +32,6 @@ body {
     padding-top: 60px; 
     padding-bottom: 60px;
     overflow-y: scroll; 
-    cursor: none;
 }
 
 h1 {
@@ -104,7 +103,6 @@ header .container {
 .hamburger {
     display: none; /* hidden by default, shown in mobile */
     font-size: 1.5rem;
-    cursor: none;
     position: absolute;
     top: 100%;
     transform: translateY(-100%);
@@ -311,10 +309,6 @@ footer p {
     align-items: center;
 }
 
-a, button {
-    cursor: none;
-}
-
 .filter-buttons {
     text-align: center;
     margin-bottom: 20px;
@@ -456,6 +450,7 @@ a, button {
 }
 
 .cursor {
+    display: none;
     width: 12px;
     height: 12px;
     border: 1px solid #000;
@@ -502,7 +497,6 @@ form label {
     display: block;
     text-align: left;
     margin-bottom: 5px;
-    cursor: none;
 }
 
 form input[type="text"],
@@ -528,20 +522,12 @@ form input[type="submit"] {
     border-radius: 5px;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    cursor: none;
 }
 
 form input[type="submit"]:hover {
     background-color: #555;
     color: #fff;
 }
-
-form input[type="text"]:hover,
-form input[type="email"]:hover,
-form textarea:hover {
-    cursor: none;
-}
-
 
 .center-container {
     display: flex;

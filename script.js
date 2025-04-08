@@ -57,25 +57,30 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 // Typing effect
-    const headingText = "Vides Harmonijā...";
-    const headingElement = document.getElementById("animated-heading");
-    let index = 0;
+const headingText = "Vides Harmonijā...";
+const headingElement = document.getElementById("animated-heading");
 
-    function typeWriter() {
-        if (headingElement && index < headingText.length) {
-            headingElement.innerHTML += headingText.charAt(index);
-            index++;
-            setTimeout(typeWriter, 120); 
-        } else if (headingElement) {
-            headingElement.classList.add("typing");
+if (headingElement) {
+    headingElement.innerHTML = headingText; // Show text instantly
+}
 
-            setTimeout(() => {
-                headingElement.classList.add("slow-blink");
-            }, 20); 
-        }
+// Animation code kept for later use
+let index = 0;
+
+function typeWriter() {
+    if (headingElement && index < headingText.length) {
+        headingElement.innerHTML += headingText.charAt(index);
+        index++;
+        setTimeout(typeWriter, 120); 
+    } else if (headingElement) {
+        headingElement.classList.add("typing");
+
+        setTimeout(() => {
+            headingElement.classList.add("slow-blink");
+        }, 20); 
     }
+}
 
-    typeWriter();
 });
 
 // FILTERS
