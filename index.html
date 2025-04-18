@@ -21,7 +21,7 @@
     </style>
 </head>
 <body class="index-page">
-    <header id="mainHeader" class="scroll-active">
+    <header id="mainHeader">
         <div class="container">
             <h1><a href="index.html">HARMONIA ART</a></h1>
             <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
@@ -44,23 +44,42 @@
       </ul>
     </nav>
 
-<div class="hero-section">
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-      <div class="hero-logo">
-        <img src="0 pictures/noBgColor.png" alt="Logo">
+    <div class="video-section" id="videoSection">
+    <div class="video-hero">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="caustics.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <div class="hero-logo">
+            <img src="0 pictures/noBgColor.png" alt="Logo">
+          </div>
+        </div>
+        <div class="scroll-arrow">
+          <span>&#8595;</span>
+        </div>
       </div>
     </div>
-
-    <div class="scroll-content">
-        <div class="scroll-text">
-        <h2>Vide, kas iedvesmo un rada harmoniju...</h2>
+  </div>
+    
+  <div class="scroll-content" id="scrollContent">
+      <div class="scroll-text">
+        <h2 class="animated-heading">Vide, kas iedvesmo un rada harmoniju...</h2>
         <p>
-        Labi izstrādāta telpa var uzlabot dzīvesveidu un atdzīvināt sajūtas. Palīdzēsim Jums izveidot skaistu un funkcionālu vidi, kas atspoguļo Jūsu unikālo stilu un vajadzības.
+          Labi izstrādāta telpa var uzlabot dzīvesveidu un atdzīvināt sajūtas. Palīdzēsim Jums izveidot skaistu un funkcionālu vidi, kas atspoguļo Jūsu unikālo stilu un vajadzības.
         </p>
       </div>
-</div>
+      <div class="extra-text">
+        <div class="left-paragraph">
+          <p>Individuāla pieeja katram projektam ļauj mums radīt vidi, kas rezonē ar tās iemītniekiem.</p>
+        </div>
+        <div class="right-paragraph">
+          <p>Mēs ticam, ka telpa nav tikai funkcionalitāte — tā ir pieredze, stāsts un harmonijas forma.</p>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -75,23 +94,75 @@
             <p id="modal-text"></p>
         </div>
     </div>
+
     <script>
-        function toggleMenu() {
-          const menu = document.getElementById('mobileMenu');
-          menu.classList.toggle('active');
-        }
+window.addEventListener("wheel", function (event) {
+  const videoSection = document.getElementById("videoSection");
+
+  if (window.scrollY <= 10 && event.deltaY > 0) {
+    event.preventDefault(); // prevent default jump
+    window.scrollTo({
+      top: videoSection.offsetHeight,
+      behavior: "smooth"
+    });
+  }
+}, { passive: false });
     </script>
+
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const header = document.getElementById("mainHeader");
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      header.classList.add("scroll-active");
-    } else {
-      header.classList.remove("scroll-active");
+  function animateHeading(heading) {
+    const text = heading.getAttribute("data-text");
+    heading.innerHTML = "";
+
+    text.split("").forEach((char, index) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      if (char === " ") span.style.marginRight = "0.25em"; // adds space between words
+      span.style.animationDelay = `${index * 0.05}s`;
+      heading.appendChild(span);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const heading = document.querySelector(".animated-heading");
+
+    if (heading) {
+      heading.setAttribute("data-text", heading.textContent.trim());
+      heading.textContent = "";
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateHeading(heading);
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
+
+      observer.observe(heading);
     }
   });
-});
-  </script>
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("mainHeader");
+    const videoSection = document.getElementById("videoSection");
+
+    window.addEventListener("scroll", function () {
+      const scrollThreshold = videoSection.offsetHeight - 60;
+
+      if (window.scrollY > scrollThreshold) {
+        header.classList.add("scroll-active");
+      } else {
+        header.classList.remove("scroll-active");
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>

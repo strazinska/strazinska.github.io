@@ -204,3 +204,36 @@ hamburger.addEventListener('click', function() {
     // Toggle the 'active' class on the mobile navigation
     mobileNav.classList.toggle('active');
 });
+
+// video
+document.addEventListener("DOMContentLoaded", function () {
+    const videoSection = document.getElementById("videoSection");
+    const scrollContent = document.getElementById("scrollContent");
+  
+    let lastScrollTop = 0;
+    let isScrolling = false;
+  
+    window.addEventListener(
+      "wheel",
+      function (event) {
+        const currentScroll = window.scrollY;
+  
+        // prevent repeated triggers
+        if (isScrolling) return;
+  
+        if (event.deltaY > 0 && currentScroll < videoSection.offsetHeight) {
+          // Scroll down
+          isScrolling = true;
+          scrollContent.scrollIntoView({ behavior: "smooth" });
+          setTimeout(() => (isScrolling = false), 1000);
+        } else if (event.deltaY < 0 && currentScroll >= videoSection.offsetHeight) {
+          // Scroll up
+          isScrolling = true;
+          videoSection.scrollIntoView({ behavior: "smooth" });
+          setTimeout(() => (isScrolling = false), 1000);
+        }
+      },
+      { passive: false }
+    );
+  });
+  
