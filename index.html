@@ -7,7 +7,8 @@
     <link rel="icon" href="0 pictures/symbol.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
     <style>
@@ -19,27 +20,25 @@
         }
     </style>
 </head>
-<body id="home-page" class="bodypage index-page">
-    <header class="headernew">
+<body class="index-page">
+    <header id="mainHeader" class="scroll-active">
         <div class="container">
             <h1><a href="index.html">HARMONIA ART</a></h1>
             <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
             <nav>
                 <ul class="nav-list">
-                    <li><a href="about.html">Par Mums</a></li>
-                    <li><a href="projects.html">Portfolio</a></li>
-                    <li><a href="vadiba.html">Projektu Vadība</a></li>
-                    <li><a href="news.html">Jaunumi</a></li>
-                    <li><a href="contact.html">Kontakti</a></li>
+                    <li><a href="about.html">PAR MUMS</a></li>
+                    <li><a href="projects.html">PORTFOLIO</a></li>
+                    <li><a href="vadiba.html">PROJEKTU VADĪBA</a></li>
+                    <li><a href="contact.html">KONTAKTI</a></li>
                 </ul>
             </nav>
             <nav class="mobile-nav" id="mobileNav">
                 <ul>
-                  <li><a href="about.html">Par Mums</a></li>
-                  <li><a href="projects.html">Portfolio</a></li>
-                  <li><a href="vadiba.html">Projektu Vadība</a></li>
-                  <li><a href="news.html">Jaunumi</a></li>
-                  <li><a href="contact.html">Kontakti</a></li>
+                    <li><a href="about.html">PAR MUMS</a></li>
+                    <li><a href="projects.html">PORTFOLIO</a></li>
+                    <li><a href="vadiba.html">PROJEKTU VADĪBA</a></li>
+                    <li><a href="contact.html">KONTAKTI</a></li>
                 </ul>
               </nav>
         </div>
@@ -66,7 +65,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
 
     
     <div class="cursor"></div>
@@ -82,5 +81,17 @@
           menu.classList.toggle('active');
         }
     </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.getElementById("mainHeader");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      header.classList.add("scroll-active");
+    } else {
+      header.classList.remove("scroll-active");
+    }
+  });
+});
+  </script>
 </body>
 </html>

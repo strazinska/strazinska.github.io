@@ -211,3 +211,4 @@ hamburger.addEventListener('click', function() {
     // Toggle the 'active' class on the mobile navigation
     mobileNav.classList.toggle('active');
 });
+

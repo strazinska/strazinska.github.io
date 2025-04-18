@@ -11,8 +11,9 @@ html, body {
     margin: 0;
     overflow: hidden;
     overflow-y: scroll; 
-    font-family: "Montserrat", sans-serif;
-    font-weight: 200;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-variation-settings: "wdth" 100;
     font-style: normal;
     background-color: #f7f7f7;
     color: #333;
@@ -37,18 +38,28 @@ html, body {
   font-style: normal;
 }
 
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  
+
 h1 {
     font-size: 1.5rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
     font-style: normal;
 }
 
 
 h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
     font-style: normal;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -147,7 +158,6 @@ p, p1 {
 
 .container h1 {
     margin-left: 40px;
-    font-size: 1.5rem;
 }
 
 .container nav {
@@ -158,11 +168,12 @@ header {
     background-color: #f7f7f7;
     color: #333;
     padding: 20px 0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #333;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .header-gap {
@@ -233,6 +244,7 @@ nav.mobile-nav ul li a {
     text-decoration: none;
     color: #f7f7f7;
     font-size: 1rem;
+    font-weight: 700; 
 }
 
 header nav, header nav1 {
@@ -261,6 +273,7 @@ header nav ul li a {
     color: #333;
     text-decoration: none;
     font-size: 1rem;
+    font-weight: 700; 
     padding: 10px 10px;
 }
 
@@ -269,6 +282,7 @@ header nav1 ul li a {
     color: #f7f7f7;
     text-decoration: none;
     font-size: 1rem;
+    font-weight: 700; 
     padding: 10px 10px;
 }
 
@@ -286,20 +300,7 @@ header h1 {
     font-size: 2rem;
 }
 
-.headernew {
-    background: transparent;
-    position: fixed;
-    color: #f7f7f7;
-    padding: 20px 0;
-    border-bottom: 1px solid #f7f7f7;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
 
-.headernew .nav-list a {
-    color: #f7f7f7;
-}
 
 section {
     padding: 40px 0;
@@ -339,7 +340,6 @@ section {
 .project-overlay h3 {
     text-decoration: none; /* removes underline */
     font-size: 1rem;        /* adjust size as you prefer */
-    font-weight: 200;    /* optional: make it lighter */
     margin: 0;              /* optional: remove default margins */
 }
 
@@ -404,8 +404,8 @@ footer p {
     color: #333;
     font-size: 1rem;
     transition: all 0.3s ease;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 200;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -892,7 +892,7 @@ form input[type="submit"]:hover {
 
 .suggested-projects-container h2 {
     margin: 0; 
-    padding-left: 20px; 
+    padding-left: 0; 
     padding-top: 20px;
     padding-bottom: 0;
     font-size: 1.2rem;
@@ -976,6 +976,7 @@ form input[type="submit"]:hover {
 
 .project-info h2 {
     padding-top: 0;
+    font-size: 1.2rem;
 }
 
 .project-parameters {
@@ -1026,6 +1027,7 @@ form input[type="submit"]:hover {
 .floor-plans-container h2 {
     text-align: left !important;
     padding-left: 20px;
+    font-size: 1.2rem;
 }
 
 .emphasized {
@@ -1093,6 +1095,25 @@ form input[type="submit"]:hover {
 .lightbox-close:focus {
     color: #bbb;
     text-decoration: none;
+}
+
+.index-page header {
+    background: transparent !important;
+    color: #f7f7f7 !important;
+    border-bottom: 1px solid transparent !important;
+    transition: all 0.3s ease;
+  }
+  
+.index-page header.scroll-active {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #f7f7f7 !important;
+  }
+
+  .index-page header .nav-list a {
+    color: #f7f7f7;
 }
 
 @media screen and (max-width: 768px) {
@@ -1215,10 +1236,11 @@ form input[type="submit"]:hover {
 
     .suggested-projects-container h2 {
         padding-top: 0px;
+        font-size: 1rem;
     }
 
     .suggested-projects {
-        margin-top: -30px; 
+        margin-top: -10px; 
     }
 
     .all-projects {
