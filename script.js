@@ -84,24 +84,17 @@ function typeWriter() {
 });
 
 // FILTERS
-$(document).ready(function(){
-    $(".filterx").click(function(){
-        var category = $(this).attr("data-filter");
-        if (category === 'all') {
-            $(".project").show();
-        } else {
-            $(".project").hide();
-            $("." + category).show();
-        }
-    });
-});
-
-$(document).ready(function() {
+$(document).ready(function () {
     $('.project').addClass('show');
 
-    $('.filterx').on('click', function() {
+    $('.filterx').on('click', function () {
         var filterValue = $(this).attr('data-filter');
-        
+
+        // Remove 'active' from all buttons, then add to clicked one
+        $('.filterx').removeClass('active');
+        $(this).addClass('active');
+
+        // Filter project items
         if (filterValue === 'all') {
             $('.project').addClass('show');
         } else {
@@ -211,4 +204,3 @@ hamburger.addEventListener('click', function() {
     // Toggle the 'active' class on the mobile navigation
     mobileNav.classList.toggle('active');
 });
-
