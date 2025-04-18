@@ -72,16 +72,31 @@
         </p>
       </div>
       <div class="extra-text">
-        <div class="left-paragraph">
-          <p>Individuāla pieeja katram projektam ļauj mums radīt vidi, kas rezonē ar tās iemītniekiem.</p>
+        <div class="paragraph-row">
+          <div class="left-paragraph">
+            <p>Individuāla pieeja katram projektam ļauj mums radīt vidi, kas rezonē ar tās iemītniekiem.</p>
+          </div>
+          <div class="right-paragraph">
+            <p>Mēs ticam, ka telpa nav tikai funkcionalitāte — tā ir pieredze, stāsts un harmonijas forma.</p>
+          </div>
         </div>
-        <div class="right-paragraph">
-          <p>Mēs ticam, ka telpa nav tikai funkcionalitāte — tā ir pieredze, stāsts un harmonijas forma.</p>
+      
+        <div class="center-content">
+          <p class="product-info">
+            Apskati arī mūsu citus produktus un interjera elementus, kas papildina jūsu telpu dizainu.
+          </p>
+          <a href="https://www.harmonia-art.eu/online-store/" target="_blank" class="product-button">APSKATĪT PRODUKTUS</a>
         </div>
       </div>
     </div>
 
-
+    <footer>
+      <div class="container">
+          <a href="mailto:rita.strazinska@gmail.com"><i class="fab fa-google fa-lg"></i></a>
+          <a href="https://www.linkedin.com/in/rita-lagzdina-b600b33?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEHdXSbnqSX2UbmMWqstsQg%3D%3D" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+          <p>&copy; 2025 Harmonia Art</p>
+      </div>
+  </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js" defer></script>
@@ -96,18 +111,24 @@
     </div>
 
     <script>
-window.addEventListener("wheel", function (event) {
-  const videoSection = document.getElementById("videoSection");
-
-  if (window.scrollY <= 10 && event.deltaY > 0) {
-    event.preventDefault(); // prevent default jump
-    window.scrollTo({
-      top: videoSection.offsetHeight,
-      behavior: "smooth"
-    });
-  }
-}, { passive: false });
+      document.addEventListener("DOMContentLoaded", function () {
+        const videoSection = document.getElementById("videoSection");
+    
+        let scrolledPastOnce = false;
+    
+        window.addEventListener("wheel", function (event) {
+          if (!scrolledPastOnce && window.scrollY <= 10 && event.deltaY > 0) {
+            event.preventDefault();
+            scrolledPastOnce = true;
+            window.scrollTo({
+              top: videoSection.offsetHeight,
+              behavior: "smooth"
+            });
+          }
+        }, { passive: false });
+      });
     </script>
+    
 
 <script>
   function animateHeading(heading) {
@@ -149,12 +170,9 @@ window.addEventListener("wheel", function (event) {
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const header = document.getElementById("mainHeader");
-    const videoSection = document.getElementById("videoSection");
 
     window.addEventListener("scroll", function () {
-      const scrollThreshold = videoSection.offsetHeight - 60;
-
-      if (window.scrollY > scrollThreshold) {
+      if (window.scrollY > 100) {
         header.classList.add("scroll-active");
       } else {
         header.classList.remove("scroll-active");
@@ -162,6 +180,8 @@ window.addEventListener("wheel", function (event) {
     });
   });
 </script>
+
+
 
 
 </body>
