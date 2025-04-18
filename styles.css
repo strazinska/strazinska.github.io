@@ -205,12 +205,15 @@ header .container {
 /* Dropdown menu styles for small screens */
 nav.mobile-nav {
     display: none;
-    background-color: #333;
-    position: absolute;
-    top: 43px; /* Adjust based on your header height */
-    right: 0px;
-    max-width: 200px; /* width only as wide as the content */
-    min-width: 170px;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed;
+    top: 70px; /* Adjust based on your header height */
+    right: 10px;
+    border-radius: 10px;
+    max-width: 300px;
+    min-width: 190px;
     z-index: 999;
     margin-right: 0px;
 }
@@ -232,7 +235,7 @@ nav.mobile-nav ul {
 nav.mobile-nav li {
     width: 100%;
     padding: 10px;
-    border-bottom: 1px solid #f7f7f7;
+    padding-right: 20px;
     text-align: right;
 }
 
@@ -242,9 +245,13 @@ nav.mobile-nav ul li a {
     padding-top: 10px;
     text-align: right;
     text-decoration: none;
-    color: #f7f7f7;
+    color: #333;
     font-size: 1rem;
     font-weight: 700; 
+}
+
+.index-page .mobile-nav ul li a {
+    color: #f7f7f7;
 }
 
 header nav, header nav1 {
@@ -595,17 +602,17 @@ form textarea {
 }
 
 form input[type="submit"] {
-    background-color: #E6E8FF;
-    color: #33A56D;
-    border: none;
+    background-color: #f7f7f7;
+    color: #333;
     padding: 10px 20px;
+    border: 1px solid #333;
     border-radius: 5px;
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
 form input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #333;
     color: #fff;
 }
 
