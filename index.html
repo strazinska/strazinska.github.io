@@ -74,19 +74,21 @@
       <div class="extra-text">
         <div class="paragraph-row">
           <div class="left-paragraph">
-            <p>Individuāla pieeja katram projektam ļauj mums radīt vidi, kas rezonē ar tās iemītniekiem.</p>
+            <p><span class="emphasized">Individuāla pieeja katram projektam ļauj mums radīt vidi, kas rezonē ar tās iemītniekiem.</span></p>
+            <p class="product-info">
+              Ieskatieties mūsu paveiktajos projektos un iedvesmojieties savas telpas dizainam!
+            </p>
+            <a href="projects.html" target="_blank" class="product-button">APSKATĪT PORTFOLIO</a>
           </div>
           <div class="right-paragraph">
-            <p>Mēs ticam, ka telpa nav tikai funkcionalitāte — tā ir pieredze, stāsts un harmonijas forma.</p>
+            <p><span class="emphasized">Mēs ticam, ka telpa nav tikai funkcionalitāte — tā ir pieredze, stāsts un harmonijas forma.</span></p>
+            <p class="product-info">
+              Apskatiet mūsu produktus un interjera elementus, kas papildinās Jūsu telpu!
+            </p>
+            <a href="https://www.harmonia-art.eu/online-store/" target="_blank" class="product-button">APSKATĪT PRODUKTUS</a>
           </div>
         </div>
-      
-        <div class="center-content">
-          <p class="product-info">
-            Apskati arī mūsu citus produktus un interjera elementus, kas papildina jūsu telpu dizainu.
-          </p>
-          <a href="https://www.harmonia-art.eu/online-store/" target="_blank" class="product-button">APSKATĪT PRODUKTUS</a>
-        </div>
+
       </div>
     </div>
 
@@ -168,16 +170,19 @@
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const header = document.getElementById("mainHeader");
+  const header = document.getElementById('mainHeader');
+  let lastScrollTop = 0;
 
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 100) {
-        header.classList.add("scroll-active");
-      } else {
-        header.classList.remove("scroll-active");
-      }
-    });
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > 10) {
+      header.classList.add('hide-on-scroll');
+    } else {
+      header.classList.remove('hide-on-scroll');
+    }
+
+    lastScrollTop = scrollTop;
   });
 </script>
 
